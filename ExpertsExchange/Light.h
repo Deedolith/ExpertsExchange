@@ -9,6 +9,7 @@ class Light :
 private:
 public:
 	virtual void onOpen() const override;
+	virtual void onOpen(std::string const& color) const override;
 	virtual void onClose() const override;
 };
 

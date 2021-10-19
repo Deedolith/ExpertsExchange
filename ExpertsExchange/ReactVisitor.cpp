@@ -1,5 +1,6 @@
 #include "ReactVisitor.h"
 #include "Observer.h"
+#include "OpenEvent.h"
 
 ReactVisitor::ReactVisitor(Observer const& observer) :
 	mObserver{ observer }
@@ -7,7 +8,10 @@ ReactVisitor::ReactVisitor(Observer const& observer) :
 }
 void ReactVisitor::visit(OpenEvent const& event) const
 {
-	mObserver.onOpen();
+	if (event.hasColor())
+		mObserver.onOpen(event.getColor());
+	else
+		mObserver.onOpen();
 }
 void ReactVisitor::visit(CloseEvent const& event) const
 {

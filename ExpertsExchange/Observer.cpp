@@ -12,6 +12,10 @@ void Observer::onOpen() const
 {
 }
 
+void Observer::onOpen(std::string const& color) const
+{
+}
+
 void Observer::onClose() const
 {
 }

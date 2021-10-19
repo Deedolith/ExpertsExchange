@@ -1,5 +1,6 @@
 #include "Subject.h"
 #include "Observer.h"
+#include <cassert>
 
 void Subject::subscribe(Observer* observer)
 {

@@ -7,6 +7,7 @@ void Door::open()
 {
 	std::cout << "Door opened." << std::endl;
 	raiseEvent(OpenEvent{});
+	raiseEvent(OpenEvent{ "Blue" });
 }
 
 void Door::close()

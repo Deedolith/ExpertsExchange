@@ -2,7 +2,6 @@
 #define SUBJECT_H
 
 #include <vector>
-#include <cassert>
 
 class Observer;
 class IEvent;
